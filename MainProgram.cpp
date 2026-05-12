@@ -153,7 +153,7 @@ double Vehicle::getFuelLevel() const {return fuelLevel;}
 //         - fuelLevel += amount
 //         - If fuelLevel > 100.0, clamp to 100.0
 void Vehicle::refuel(double amount){
-    if (amount < 40)return;
+    if (amount <= 0)return;
     fuelLevel += amount;
     if(fuelLevel > 100.0) fuelLevel = 100.0;
 }
